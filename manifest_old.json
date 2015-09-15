@@ -1,0 +1,6 @@
+{
+    "background": {
+		"scripts": ["js/eventPage.js", "js/changeImage.js"],
+        "persistent": false
+	}
+}

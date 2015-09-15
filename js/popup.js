@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() 
+document.addEventListener('DOMContentLoaded', function () 
 {
 	var checkPageButton = document.getElementById('checkPage');
 	checkPageButton.addEventListener('click', function() 
@@ -11,7 +11,17 @@ document.addEventListener('DOMContentLoaded', function()
 				//chrome.tabs.executeScript(null, {file: "content_script.js"});
 			}
 		);
-
+        
+        //chrome.tabs.getSelected(null, function (tab) {
+        chrome.tabs.executeScript(null, {file: "js/changeImage.js"});
+        //});
+        
+//        chrome.tabs.getSelected(null, function (tab) {
+//            var newsImg = document.getElementsByClassName("article-media");
+//            console.log("Number of article-media's:   " + newsImg.length);
+//            console.log(tab.url);
+//        });
+        
 		//From the tutorial; how to use url in logic:
 		//chrome.tabs.getSelected(null, function(tab) 
 		//{
