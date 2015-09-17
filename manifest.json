@@ -7,7 +7,7 @@
 
     "content_scripts": [
         {
-            "matches": ["www.news.com.au/*"],
+            "matches": ["http://www.news.com.au/*"],
             "js": ["js/changeImage.js"]
         }
     ],
