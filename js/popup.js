@@ -3,14 +3,14 @@ document.addEventListener('DOMContentLoaded', function ()
 	var checkPageButton = document.getElementById('checkPage');
 	checkPageButton.addEventListener('click', function() 
 	{
-		chrome.tabs.executeScript
-		(
-			{
-				code: 'document.body.style.backgroundColor="red"'
-				//To inject code from code in a file:
-				//chrome.tabs.executeScript(null, {file: "content_script.js"});
-			}
-		);
+//		chrome.tabs.executeScript
+//		(
+//			{
+//				code: 'document.body.style.backgroundColor="red"'
+//				//To inject code from code in a file:
+//				//chrome.tabs.executeScript(null, {file: "content_script.js"});
+//			}
+//		);
         
         //chrome.tabs.getSelected(null, function (tab) {
         chrome.tabs.executeScript(null, {file: "js/changeImage.js"});
