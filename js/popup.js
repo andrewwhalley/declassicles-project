@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function ()
 //		);
         
         //chrome.tabs.getSelected(null, function (tab) {
-        chrome.tabs.executeScript(null, {file: "js/changeImage.js"});
+        chrome.tabs.executeScript(null, {file: "js/revertImage.js"});
         //});
         
 //        chrome.tabs.getSelected(null, function (tab) {
