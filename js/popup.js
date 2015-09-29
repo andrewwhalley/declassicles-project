@@ -1,41 +1,51 @@
+var currUser = 'user1';
+
 document.addEventListener('DOMContentLoaded', function () 
 {
-	var checkPageButton = document.getElementById('checkPage');
-	checkPageButton.addEventListener('click', function() 
+	var easyButton = document.getElementById('easyPuzzle');
+	easyButton.addEventListener('click', function() 
 	{
-//		chrome.tabs.executeScript
-//		(
-//			{
-//				code: 'document.body.style.backgroundColor="red"'
-//				//To inject code from code in a file:
-//				//chrome.tabs.executeScript(null, {file: "content_script.js"});
-//			}
-//		);
         
-        //chrome.tabs.getSelected(null, function (tab) {
-        chrome.tabs.executeScript(null, {file: "js/revertImage.js"});
-        //});
-        
-//        chrome.tabs.getSelected(null, function (tab) {
-//            var newsImg = document.getElementsByClassName("article-media");
-//            console.log("Number of article-media's:   " + newsImg.length);
-//            console.log(tab.url);
-//        });
-        
-		//From the tutorial; how to use url in logic:
-		//chrome.tabs.getSelected(null, function(tab) 
-		//{
-			// d = document;
-			// var f = d.createElement('form');
-			// f.action = 'http://gtmetrix.com/analyze.html?bm';
-			// f.method = 'post';
-			// var i = d.createElement('input');
-			// i.type = 'hidden';
-			// i.name = 'url';
-			// i.value = tab.url;
-			// f.appendChild(i);
-			// d.body.appendChild(f);
-			// f.submit();
-		//});
+        // Script to be run at the end of the game
+        //chrome.tabs.executeScript(null, {file: "js/revertImage.js"});
+        //chrome.tabs.executeScript(null, {file: "js/fbLogin.js"});
+        initPuzzle(2);
+        $("#difficulty").hide();
+        $("#source_image").show();
 	}, false);
+    var hardButton = document.getElementById('hardPuzzle');
+    hardButton.addEventListener('click', function()
+    {
+        initPuzzle(8);
+        $("#difficulty").hide();
+        $("#source_image").show();
+    }, false);
 }, false);
+
+function initIFrame() {
+	chrome.tabs.query({
+		active : true,
+		currentWindow : true
+	}, function(tabs) {
+		var expiry = new Date(parseInt(localStorage.expiryTime));
+		var now = new Date();
+		if (localStorage.accessToken && now < expiry) {
+			$('#frame').show();
+		} else {
+			$('#frame').hide();
+			loginfacebook(initIFrame);
+		}
+	});
+}
+
+function getUserData() {
+    $.getJSON("../store/userData.json", function(data) {
+        //alert();
+        $("#source_image").attr("src", data.user1.prevImg);
+    });
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+	//initIFrame();
+    getUserData();
+});

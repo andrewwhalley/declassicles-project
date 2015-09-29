@@ -1,0 +1,11 @@
+{
+    "user1" : {
+            "pw" : "whynocipher",
+            "prevImg" : "http://cdn.newsapi.com.au/image/v1/2a544d00fc381f0323126f5cb86e4f52"
+        },
+    
+    "user2" : {
+            "pw" : "123456",
+            "prevImg" : "http://cdn.newsapi.com.au/image/v1/751d00efbb75c990afcf729c56a6d904"
+        }
+}

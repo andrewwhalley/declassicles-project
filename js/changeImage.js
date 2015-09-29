@@ -1,4 +1,3 @@
-//chrome.tabs.getSelected(null, function (tab) {
 var storyDiv = document.getElementsByClassName("story-body");
 if (storyDiv.length > 0) {
     storyDiv = storyDiv[0];
@@ -7,11 +6,6 @@ if (storyDiv.length > 0) {
     for (var i = 0; i < newsImgs.length; i++) {
         newsImgs[i].style.webkitFilter = "blur(15px) saturate(10)";
     }
-    // Change the source of the videos
-//    var newsVids = storyDiv.getElementsByTagName("video");
-//    for (var i = 0; i < newsVids.length; i++) {
-//        newsVids[i].src = "http://www.w3schools.com/html/mov_bbb.mp4";
-//    }
     // 'Classify' the text
     var newsParagraphs = storyDiv.getElementsByTagName("p");
     var paraText = "";
@@ -22,6 +16,10 @@ if (storyDiv.length > 0) {
     for (var i = 0; i < newsParagraphs.length; i++) {
         // Don't 'classify' image captions
         if (newsParagraphs[i].classList.contains("caption")) {
+            continue;
+        }
+        // Don't 'classify' text with italics in it
+        if (newsParagraphs[i].getElementsByTagName("i").length > 0) {
             continue;
         }
         // Don't 'classify' text with links in it
