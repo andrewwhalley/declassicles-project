@@ -2,14 +2,26 @@ var currUser = 'user1';
 
 document.addEventListener('DOMContentLoaded', function () 
 {
-	var easyButton = document.getElementById('easyPuzzle');
+//	var popup = chrome.extension.getBackgroundPage().popup,
+//        $body = $('body'); 
+//    $(window).unload(function() {
+//        popup.cache = $body.html();
+//    });
+//    
+//    if (popup.cache) {
+//        $body.html(popup.cache);
+//    } else {
+//        initialize();
+//    }
+    
+    var easyButton = document.getElementById('easyPuzzle');
 	easyButton.addEventListener('click', function() 
 	{
         
         // Script to be run at the end of the game
         //chrome.tabs.executeScript(null, {file: "js/revertImage.js"});
         //chrome.tabs.executeScript(null, {file: "js/fbLogin.js"});
-        initPuzzle(2);
+        initPuzzle(1);
         $("#difficulty").hide();
         $("#source_image").show();
 	}, false);
