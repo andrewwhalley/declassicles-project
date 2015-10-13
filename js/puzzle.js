@@ -7,6 +7,10 @@ function start_puzzle(x){
         onComplete: function(){
             $('#source_image').fadeOut(150).fadeIn();
             $('#puzzle_solved').show();
+            $("#hideUsers").hide();
+            $("#showUsers").hide();
+            $("#users").hide();
+            $("#difficulty").show();
             chrome.tabs.executeScript(null, {file: "js/revertImage.js"}, function() {
                 chrome.storage.sync.get("prevImg", function(newPrevImg) {
                     console.log("Retrieved from extension storage: " + newPrevImg.prevImg);
