@@ -1,5 +1,5 @@
 {
-	"manifest_version": 3,
+	"manifest_version": 4,
 
 	"name": "Declassicle",
 	"description": "This extension brings games and puzzles to your reading.",
@@ -31,5 +31,15 @@
          "activeTab",
          "tabs",
          "storage"
-	 ]
+	 ],
+    
+     "web_accessible_resources": [
+        "js/gameLoad.js",
+        "js/puzzle.js",
+        "js/jQuery-snapPuzzle-master/jquery.snap-puzzle.js",
+        "js/jquery-2.1.4.min.js",
+        "js/jquery-ui.min.js",
+        "js/popup.js",
+        "kangaroo.jpg"
+     ]
 }

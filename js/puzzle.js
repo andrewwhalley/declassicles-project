@@ -11,22 +11,23 @@ function start_puzzle(x){
             $("#showUsers").hide();
             $("#users").hide();
             $("#difficulty").show();
-            chrome.tabs.executeScript(null, {file: "js/revertImage.js"}, function() {
-                chrome.storage.sync.get("prevImg", function(newPrevImg) {
-                    console.log("Retrieved from extension storage: " + newPrevImg.prevImg);
-                    $.getJSON("../store/userData.json", function(data) {
-                        //alert();
-                        data.user1.prevImg = newPrevImg.prevImg;
-                        var fout = new File("../store/userData.json");
-                        if (fout.isopen) {
-                            fout.writeline(JSON.stringify(data));
-                            fout.close();
-                        } else {
-                            alert("No good :(");
-                        }
-                    });
-                });
-            });
+            Dclsffy();
+//            chrome.tabs.executeScript(null, {file: "js/revertImage.js"}, function() {
+//                chrome.storage.sync.get("prevImg", function(newPrevImg) {
+//                    console.log("Retrieved from extension storage: " + newPrevImg.prevImg);
+//                    $.getJSON("../store/userData.json", function(data) {
+//                        //alert();
+//                        data.user1.prevImg = newPrevImg.prevImg;
+//                        var fout = new File("../store/userData.json");
+//                        if (fout.isopen) {
+//                            fout.writeline(JSON.stringify(data));
+//                            fout.close();
+//                        } else {
+//                            alert("No good :(");
+//                        }
+//                    });
+//                });
+//            });
         }
     });
 }
