@@ -32,8 +32,8 @@
                         $(this).css({
                             width: pieceWidth,
                             height: pieceHeight,
-                            left: y*pieceWidth,//+490,
-                            top: x*pieceHeight,//+50,
+                            left: y*pieceWidth+490,
+                            top: x*pieceHeight+50,
                             border: '1px solid blue'
                         });
                     });
@@ -45,11 +45,11 @@
                             $(this).css({
                                 width: pieceWidth,
                                 height: pieceHeight,
-                                //position: 'absolute',
-                                //border: '1px solid red',
-                                left: Math.floor((Math.random()*(maxX+1))),//+50),
-                                top: Math.floor((Math.random()*(maxY+1))),//+150,
-                                //zIndex: Math.floor((Math.random()*10)+1),
+                                position: 'absolute',
+                                border: '1px solid red',
+                                left: Math.floor((Math.random()*(maxX+1))+50),
+                                top: Math.floor((Math.random()*(maxY+1)))+150,
+                                zIndex: Math.floor((Math.random()*10)+1),
                                // left: slot_y*pieceWidth+puzzle_offset.left-pile_offset.left,
                                 //top: slot_x*pieceHeight+puzzle_offset.top-pile_offset.top,
                                 backgroundPosition: (-pos_y*pieceWidth)+'px '+(-pos_x*pieceHeight)+'px',
@@ -61,13 +61,13 @@
                             $(this).css({
                                 width: pieceWidth,
                                 height: pieceHeight,
-                                //position: 'absolute',
-                                //border: '1px solid red',
+                                position: 'absolute',
+                                border: '1px solid red',
                                 //left: Math.floor((Math.random()*(maxX+1))),
                                 //top: Math.floor((Math.random()*(maxY+1))),
-                                left: Math.floor((Math.random()*(maxX+1))),//+50),
-                                top: Math.floor((Math.random()*(maxY+1))),//+150,
-                                //zIndex: Math.floor((Math.random()*10)+1),
+                                left: Math.floor((Math.random()*(maxX+1))+50),
+                                top: Math.floor((Math.random()*(maxY+1)))+150,
+                                zIndex: Math.floor((Math.random()*10)+1),
                                 backgroundPosition: (-y*pieceWidth)+'px '+(-x*pieceHeight)+'px',
                                 backgroundSize: that.width()
                             });
@@ -97,9 +97,9 @@
                         width: pieceWidth,
                         height: pieceHeight,
                         position: 'absolute',
-                        left: Math.floor((Math.random()*(maxX+1))),//+50),
-                        top: Math.floor((Math.random()*(maxY+1))),//+150,
-                        zIndex: Math.floor((Math.random()*10)+1),//00),
+                        left: Math.floor((Math.random()*(maxX+1))+50),
+                        top: Math.floor((Math.random()*(maxY+1)))+150,
+                        zIndex: Math.floor((Math.random()*10)+100),
                         backgroundImage: 'url('+src+')',
                         backgroundPosition: (-y*pieceWidth)+'px '+(-x*pieceHeight)+'px',
                         backgroundSize: that.width()
@@ -112,10 +112,11 @@
                     $('<div class="snappuzzle-slot '+puzzle_class+'"/>').data('pos', x+'_'+y).css({
                         width: pieceWidth,
                         height: pieceHeight,
-                        left: y*pieceWidth,//+490,
-                        top: x*pieceHeight//+50,
-                        //position: 'absolute',
-                        //zIndex: 10,
+                        left: y*pieceWidth+490,
+                        top: x*pieceHeight+50,
+                        position: 'absolute',
+                        border: '1px solid red',
+                        zIndex: 10,
                     }).appendTo(puzzle).droppable({
                         accept: '.'+puzzle_class,
                         hoverClass: 'snappuzzle-slot-hover',

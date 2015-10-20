@@ -5,20 +5,41 @@
     <title>Declassicle</title>
     <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
     <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+    <!-- <script type="text/javascript" src="js/bootstrap.min.js"></script> -->
     <script type="text/javascript" src="js/jQuery-snapPuzzle-master/jquery.snap-puzzle.min.js"></script>
     <script type="text/javascript" src="js/list.min.js"></script>
     <script type="text/javascript" src="js/popup.js"></script>
     <!-- <script type="text/javascript" src="js/fbLogin.js"></script> -->
     <script type="text/javascript" src="js/puzzle.js"></script>
     <link rel="stylesheet" href="css/popup.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/list-css.css">
   </head>
-  <body style="min-width:600px;">
-    <div id="Header" style="display:block;">
-        <h1 style="margin:10px;">Declassicle</h1>
-        <button class="requestHelp" id="showUsers" style="margin:10px; display:none;">Show Current Users</button>
-        <button class="requestHelp" id="hideUsers" style="margin:10px; display:none;">Hide Current Users</button>
-        <div id="users" style="display:none;">
+  <body style="min-width:882px;min-height:595px;">
+    <div id="declassicle-image" style="display:block;position:absolute;">
+        <img src="css/Declassicle-logo.jpg" style="max-width:800px;"/>
+    </div>
+    <div id="declassicle-content" style="display:none;">
+        <div id="Header" style="display:block;text-align:center;">
+            <h1 style="margin:10px;"><img src="css/Declassicle-logo.jpg" style="width:230px;height:155px;display:block;vertical-align:middle;max-width:100%;max-height:100%;margin:-25px auto -25px 5px;"/></h1>
+            <!--<button class="requestHelp" id="showUsers" style="margin:10px;">Show Current Users</button>
+            <button class="requestHelp" id="hideUsers" style="margin:10px; display:none;">Hide Current Users</button>-->
+            
+        </div>
+        <input id="tab1" type="radio" name="tabs" checked>
+        <label for="tab1">Current Users</label>
+
+        <input id="tab2" type="radio" name="tabs">
+        <label for="tab2">Friends Leaderboard</label>
+
+        <input id="tab3" type="radio" name="tabs">
+        <label for="tab3">Article Leaderboard</label>
+
+        <input id="tab4" type="radio" name="tabs">
+        <label for="tab4">Global Leaderboard</label>
+
+        <section id="content1">
+        <div id="users">
             <ul class="list">
               <li>
                 <img class="profilepic" src="css/man1.jpg"/>
@@ -46,50 +67,50 @@
               </li>
             </ul>
         </div>
-    </div>
-    <!--<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
-    </fb:login-button>-->
+        </section>
 
-    <div id="status">
-    </div>
-    <div id="difficulty">
-        <button class="requestHelp" id="easyPuzzle" style="margin:10px;">Easy</button>
-        <button class="requestHelp" id="hardPuzzle" style="margin:10px;">Hard</button>
-    </div>
-    <!-- <iframe id='frame'></iframe> -->
-    <!-- HTML for the image snap puzzle -->
-    <div id="puzzle-containment" style="border-top: 1px solid #eee;border-bottom:1px solid #eee;background:#fafafa;margin:30px 0;padding:10px;text-align:center">
-        <div class="pure-g" style="max-width:1920px;margin:auto">
-            <div class="pure-u-1 pure-u-md-1-2"><div style="margin:10px">
-                <img id="source_image" class="pure-img" src="" width="680px" height="550px" style="display:none">
-            </div></div>
-            <div class="pure-u-1 pure-u-md-1-2">
-                <div id="pile" style="margin:10px">
-                    <div id="puzzle_solved" style="display:none;text-align:center;position:relative;top:25%">
-                        <h2 style="margin:0 0 20px">Well done! Your article has been declassified for you to read. Your score was: 2400.</h2>
-                        <div id="leaderboard">
-                            <h2 style="margin:0 0 20px"><b>Leaderboard</b></h2>
-                            <ul class="list">
-                              <li>
-                                <img class="profilepic" src="css/man3.jpg"/>
-                                <h3 class="name">Simon Says</h3>
-                                <h3 class="userscore">3700</h3>
-                              </li>
-                              <li>
-                                <img class="profilepic" src="css/man4.jpg"/>
-                                <h3 class="name">Joe Danger</h3>
-                                <h3 class="userscore">3650</h3>
-                              </li>
-                              <li>
-                                <img class="profilepic" src="css/woman3.jpg"/>
-                                <h3 class="name">Mia Sofunny</h3>
-                                <h3 class="userscore">3400</h3>
-                              </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <section id="content2">
+            <p>None of your friends are currently playing Declassicles. Would you like to invite them?</p>
+            <button class="requestHelp" id="inviteFriend">Invite Friends</button>
+        </section>
+
+        <section id="content3">
+        <div id="leaderboard">
+            <ul class="list">
+              <li>
+                <img class="profilepic" src="css/man4.jpg"/>
+                <h3 class="name">Joe Danger</h3>
+                <h3 class="userscore">3650</h3>
+              </li>
+            </ul>
+        </div>
+        </section>
+
+        <section id="content4">
+        <div id="leaderboard">
+            <ul class="list">
+              <li>
+                <img class="profilepic" src="css/man3.jpg"/>
+                <h3 class="name">Simon Says</h3>
+                <h3 class="userscore">3700</h3>
+              </li>
+              <li>
+                <img class="profilepic" src="css/man4.jpg"/>
+                <h3 class="name">Joe Danger</h3>
+                <h3 class="userscore">3650</h3>
+              </li>
+              <li>
+                <img class="profilepic" src="css/woman3.jpg"/>
+                <h3 class="name">Mia Sofunny</h3>
+                <h3 class="userscore">3400</h3>
+              </li>
+            </ul>
+        </div>
+        </section>
+        <!--<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+        </fb:login-button>-->
+
+        <div id="status">
         </div>
     </div>
   </body>

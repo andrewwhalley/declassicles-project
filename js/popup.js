@@ -14,6 +14,13 @@ document.addEventListener('DOMContentLoaded', function ()
 //        initialize();
 //    }
     
+    var declassicleImg = document.getElementById('declassicle-image');
+    declassicleImg.addEventListener('click', function()
+    {
+        $(this).fadeOut(2000);
+        $("#declassicle-content").fadeIn(2000);
+    }, false);
+    
     var user1Help = document.getElementById('user1Help');
     user1Help.addEventListener('click', function()
     {
@@ -42,45 +49,45 @@ document.addEventListener('DOMContentLoaded', function ()
         $("#user4Help").hide();
     }, false);
     
-    var usersButton = document.getElementById('showUsers');
-    usersButton.addEventListener('click', function()
-    {
-        var options = {
-            valueNames: ['profilepic', 'name', 'requesthelp']
-        };
-        $("#users").show();
-        $("#hideUsers").show();
-        $("#showUsers").hide();
-    }, false);
+//    var usersButton = document.getElementById('showUsers');
+//    usersButton.addEventListener('click', function()
+//    {
+//        var options = {
+//            valueNames: ['profilepic', 'name', 'requesthelp']
+//        };
+//        $("#users").show();
+//        $("#hideUsers").show();
+//        $("#showUsers").hide();
+//    }, false);
+//    
+//    var hideUsersButton = document.getElementById('hideUsers');
+//    hideUsersButton.addEventListener('click', function()
+//    {
+//        $("#users").hide();
+//        $("#hideUsers").hide();
+//        $("#showUsers").show();
+//    }, false);
     
-    var hideUsersButton = document.getElementById('hideUsers');
-    hideUsersButton.addEventListener('click', function()
-    {
-        $("#users").hide();
-        $("#hideUsers").hide();
-        $("#showUsers").show();
-    }, false);
-    
-    var easyButton = document.getElementById('easyPuzzle');
-	easyButton.addEventListener('click', function() 
-	{
-        
-        // Script to be run at the end of the game
-        //chrome.tabs.executeScript(null, {file: "js/revertImage.js"});
-        //chrome.tabs.executeScript(null, {file: "js/fbLogin.js"});
-        initPuzzle(1);
-        $("#difficulty").hide();
-        $("#showUsers").show();
-        $("#source_image").show();
-	}, false);
-    var hardButton = document.getElementById('hardPuzzle');
-    hardButton.addEventListener('click', function()
-    {
-        initPuzzle(8);
-        $("#difficulty").hide();
-        $("#showUsers").show();
-        $("#source_image").show();
-    }, false);
+//    var easyButton = document.getElementById('easyPuzzle');
+//	easyButton.addEventListener('click', function() 
+//	{
+//        
+//        // Script to be run at the end of the game
+//        //chrome.tabs.executeScript(null, {file: "js/revertImage.js"});
+//        //chrome.tabs.executeScript(null, {file: "js/fbLogin.js"});
+//        initPuzzle(1);
+//        $("#difficulty").hide();
+//        $("#showUsers").show();
+//        $("#source_image").show();
+//	}, false);
+//    var hardButton = document.getElementById('hardPuzzle');
+//    hardButton.addEventListener('click', function()
+//    {
+//        initPuzzle(8);
+//        $("#difficulty").hide();
+//        $("#showUsers").show();
+//        $("#source_image").show();
+//    }, false);
 }, false);
 
 function initIFrame() {
@@ -108,5 +115,5 @@ function getUserData() {
 
 document.addEventListener('DOMContentLoaded', function() {
 	//initIFrame();
-    getUserData();
+//    getUserData();
 });

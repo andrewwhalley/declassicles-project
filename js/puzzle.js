@@ -1,16 +1,13 @@
-function start_puzzle(x){
+function start_puzzle(x) {
     $('#puzzle_solved').hide();
     $('#source_image').snapPuzzle({
-        rows: x, columns: x,
+        rows: x,
+        columns: x,
         pile: '#pile',
         containment: '#puzzle-containment',
         onComplete: function(){
             $('#source_image').fadeOut(150).fadeIn();
             $('#puzzle_solved').show();
-            $("#hideUsers").hide();
-            $("#showUsers").hide();
-            $("#users").hide();
-            $("#difficulty").show();
             Dclsffy();
 //            chrome.tabs.executeScript(null, {file: "js/revertImage.js"}, function() {
 //                chrome.storage.sync.get("prevImg", function(newPrevImg) {
@@ -45,4 +42,31 @@ function initPuzzle(x){
         $('#pile').height($('#source_image').height());
         $('#source_image').snapPuzzle('refresh');
     });
+}
+
+function Dclsffy()
+{
+    var storyDiv = document.getElementsByClassName("story-body");
+    if (storyDiv.length > 0) {
+        storyDiv = storyDiv[0];
+        // Change the source of the images
+        var newsImgs = storyDiv.getElementsByTagName("img");
+        for (var i = 0; i < newsImgs.length; i++) {
+            newsImgs[i].style.webkitFilter = "blur(0px) saturate(1)";
+        }
+        // 'declassify' the text
+        var declassicleSpans = storyDiv.getElementsByClassName("declassicles");
+        console.log("Total length: " + declassicleSpans.length);
+        var currLength = declassicleSpans.length; 
+        for (var i=0; i<currLength; i++) {
+            declassicleSpans[0].outerHTML = declassicleSpans[0].innerHTML;
+        }
+        // Store an image from the article in chrome storage
+        // Save it using the Chrome extension storage API.
+        var newPrevImg = newsImgs[Math.floor(Math.random()*50) % newsImgs.length].src;
+//        chrome.storage.sync.set({'prevImg': newPrevImg}, function() {
+//          // Notify that we saved.
+//          console.log('Settings saved');
+//        });
+    }
 }

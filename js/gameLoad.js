@@ -1,9 +1,6 @@
-console.log('test');
-
 var currUser = 'user1';
 //getUserData();
 var easyButton = document.getElementById('easyPuzzle');
-console.log(454545);
 easyButton.addEventListener('click', function() 
 {
        
@@ -41,7 +38,6 @@ hardButton.addEventListener('click', function()
 function getUserData() {
     //$.getJSON("../store/userData.json", function(data) {
         //alert();
-        console.log("fffffffffff");
         $("#source_image").attr("src", chrome.extension.getURL('kangaroo.jpg'));
         //use a class for this image ^
     //});

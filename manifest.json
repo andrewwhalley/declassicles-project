@@ -3,7 +3,7 @@
 
 	"name": "Declassicle",
 	"description": "This extension brings games and puzzles to your reading.",
-	"version": "1.1",
+	"version": "1.3",
 
     "content_scripts": [
         {
@@ -40,6 +40,8 @@
         "js/jquery-2.1.4.min.js",
         "js/jquery-ui.min.js",
         "js/popup.js",
-        "kangaroo.jpg"
+        "css/list-css.css",
+        "css/kangaroo.jpg",
+         "css/test-img.jpg"
      ]
 }
