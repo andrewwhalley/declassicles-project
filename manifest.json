@@ -8,7 +8,7 @@
     "content_scripts": [
         {
             "matches": ["http://www.news.com.au/*"],
-            "js": ["js/changeImage.js", "js/jquery-2.1.4.min.js"]
+            "js": ["js/changeImage.js", "js/jquery-2.1.4.min.js", "js/puzzle.js"]
         }
     ],
     
@@ -47,6 +47,10 @@
          "css/man2.jpg",
          "css/woman1.jpg",
          "css/woman2.jpg",
-         "css/chat1.png"
+         "css/chat1.png",
+         "css/chat2.png",
+         "css/chat3.png",
+         "css/chat4.png",
+         "css/chatcomplete.png"
      ]
 }
