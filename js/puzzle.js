@@ -30,6 +30,10 @@ function start_puzzle(x) {
 }
 
 function initPuzzle(x){
+    if (x == 0) {
+        Dclsffy();
+        return;
+    }
     $('#pile').height($('#source_image').height());
     start_puzzle(x);
 

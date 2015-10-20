@@ -69,6 +69,14 @@ document.addEventListener('DOMContentLoaded', function ()
         chrome.tabs.executeScript(null, {file: "js/helpUser4.js"});
     }, false);
     
+    var inviteFriends = document.getElementById('inviteFriends');
+    inviteFriends.addEventListener('click', function()
+    {
+        $("#shareLink").show();
+        $("#shareMsg").show();
+        $("#inviteFriends").hide();
+    }, false);
+    
 //    var usersButton = document.getElementById('showUsers');
 //    usersButton.addEventListener('click', function()
 //    {

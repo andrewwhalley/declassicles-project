@@ -14,9 +14,18 @@ easyButton.addEventListener('click', function()
 var hardButton = document.getElementById('hardPuzzle');
 hardButton.addEventListener('click', function()
 {
-    initPuzzle(8);
+    initPuzzle(6);
     $("#difficulty").hide();
     $("#source_image").show();
+}, false);
+
+var skipButton = document.getElementById('skipPuzzle');
+skipButton.addEventListener('click', function()
+{
+    $("#difficulty").hide();
+//    initPuzzle(0);
+    Dclsffy();
+    $("#puzzle-containment").hide();
 }, false);
 
 // function initIFrame() {
