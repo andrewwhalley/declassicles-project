@@ -56,7 +56,6 @@ function Dclsffy()
         }
         // 'declassify' the text
         var declassicleSpans = storyDiv.getElementsByClassName("declassicles");
-        console.log("Total length: " + declassicleSpans.length);
         var currLength = declassicleSpans.length; 
         for (var i=0; i<currLength; i++) {
             declassicleSpans[0].outerHTML = declassicleSpans[0].innerHTML;

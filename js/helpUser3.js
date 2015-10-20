@@ -1,0 +1,1 @@
+document.getElementById('helpImg').src = chrome.extension.getURL('css/woman1.jpg');

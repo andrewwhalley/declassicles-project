@@ -1,0 +1,1 @@
+document.getElementById('helpImg').src = chrome.extension.getURL('css/man2.jpg');

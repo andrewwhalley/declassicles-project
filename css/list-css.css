@@ -45,6 +45,12 @@
 #difficulty {
     left: 50%;
 }
+.name {
+    margin:3px;
+}
+.userscore {
+    margin:3px;
+}
 /*
 img {
   max-width: 100%;

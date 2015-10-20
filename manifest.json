@@ -42,6 +42,10 @@
         "js/popup.js",
         "css/list-css.css",
         "css/kangaroo.jpg",
-         "css/test-img.jpg"
+         "css/test-img.jpg",
+         "css/man1.jpg",
+         "css/man2.jpg",
+         "css/woman1.jpg",
+         "css/woman2.jpg"
      ]
 }
