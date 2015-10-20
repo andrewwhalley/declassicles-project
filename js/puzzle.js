@@ -9,7 +9,12 @@ function start_puzzle(x) {
             $('#source_image').fadeOut(150).fadeIn();
             $('#puzzle_solved').show();
             Dclsffy();
-            document.getElementById('helpChat').src = "chrome-extension://khjadhpmoemiiobonbigedkpeblinjem/css/chatcomplete.png"
+            //console.log($('#helpChat').css('height'));
+            if(parseInt($('#helpChat').css('height')) > 0)
+            {
+                //console.log('h');
+                document.getElementById('helpChat').src = "chrome-extension://khjadhpmoemiiobonbigedkpeblinjem/css/chatcomplete.png";
+            }
 //            chrome.tabs.executeScript(null, {file: "js/revertImage.js"}, function() {
 //                chrome.storage.sync.get("prevImg", function(newPrevImg) {
 //                    console.log("Retrieved from extension storage: " + newPrevImg.prevImg);

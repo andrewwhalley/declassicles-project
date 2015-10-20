@@ -4,7 +4,7 @@
 // @version      0.1
 // @description  testing overlay
 // @author       You
-// @match        http://www.news.com.au/travel/travel-advice/things-about-australia-that-shock-first-time-visitors/story-fnndib5x-1227566198166
+// @match        http://www.news.com.au/entertainment/celebrity-life/justin-bieber-says-nude-photos-showed-shrinkage/story-fn907478-1227572983142
 // @grant        none
 // @require http://code.jquery.com/jquery-latest.js
 // ==/UserScript==
