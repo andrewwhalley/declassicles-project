@@ -75,6 +75,27 @@ document.addEventListener('DOMContentLoaded', function ()
         $("#shareLink").show();
         $("#shareMsg").show();
         $("#inviteFriends").hide();
+        swal({
+            title: "Request for help!",
+            text: "Jonny Nofriends has requested help! Will you help him?",
+            type: "info",
+            showCancelButton: true,
+            cancelButtonColor: "#DD6B55",
+
+            confirmButtonText: "Yeah, sure!",
+            cancelButtonText: "Nah I'm right, tah.",
+            closeOnConfirm: false,
+            closeOnCancel: false,
+            showLoaderOnConfirm: true
+        }, function(isConfirm){
+            setTimeout(function(){
+                if (isConfirm) {
+                    swal("Great!", "Redirecting you now.", "success");
+                } else {
+                    swal("Maybe some other time...", "Antisocial nerd.", "success");
+                }
+            }, 2000);
+        });
     }, false);
     
 //    var usersButton = document.getElementById('showUsers');

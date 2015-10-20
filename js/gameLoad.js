@@ -28,6 +28,12 @@ skipButton.addEventListener('click', function()
     $("#puzzle-containment").hide();
 }, false);
 
+var hidePuzzle = document.getElementById('hidePuzzle');
+hidePuzzle.addEventListener('click', function()
+{
+    $("#puzzle-containment").hide();
+}, false);
+
 // function initIFrame() {
 // 	chrome.tabs.query({
 // 		active : true,
